@@ -790,7 +790,6 @@ static int imgui_TableHeader(lua_State* L)
     ImGui::TableHeader(label);
     return 0;
 }
-}
 static int imgui_TableHeadersRow(lua_State* L)
 {
     DM_LUA_STACK_CHECK(L, 0);
