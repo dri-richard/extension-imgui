@@ -786,8 +786,10 @@ static int imgui_TableHeader(lua_State* L)
 {
     DM_LUA_STACK_CHECK(L, 0);
     imgui_NewFrame();
-    ImGui::TableHeader();
+    const char* label = luaL_checkstring(L, 1);
+    ImGui::TableHeader(label);
     return 0;
+}
 }
 static int imgui_TableHeadersRow(lua_State* L)
 {
